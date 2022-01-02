@@ -112,7 +112,7 @@ CCFLAGS += -Wall -Wextra $(VMFEATURES) $(VMOPTS) $(CCFEATURES) -DBOARD_$(BOARD) 
 $(APP): $(OBJS) $(CODE)
 
 	$(ECODE)
-	$(LD) $(LDFLAGS) -o $(APP) $(OBJS) $(EOBJ)
+	$(LD) -o $(APP) $(OBJS) $(EOBJ) $(LDFLAGS)
 	$(EXTRA)
 	
 AVR:	$(APP)
